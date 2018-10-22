@@ -1,0 +1,11 @@
+<p>
+  user works!
+</p>
+
+<button (click)="getAllUsers()">Get All</button>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} {{ user.username }} {{ user.role }} {{ user.password }}
+  </li>
+</ul>

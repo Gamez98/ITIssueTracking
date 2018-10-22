@@ -1,0 +1,15 @@
+*{
+  color: white;
+}
+
+li {
+  margin-top: 20px;
+}
+
+
+#sideNav {
+  background-color: black;
+  width: 200px;
+  position: absolute;
+  height: 100%;
+}

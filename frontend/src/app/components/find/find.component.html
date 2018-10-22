@@ -1,0 +1,52 @@
+<div id="page-content-wrapper"  id="mainContent" class="col-lg-9">
+
+    <div class="container-fluid">
+        <form>
+            <input type="text" [(ngModel)]="username" name="username" #ctrl="ngModel">
+            <button type="submit" (click)="findRequest()">Find Request</button>
+        </form> 
+    </div>
+
+    <div *ngIf="requests.length > 0">
+
+      <table class="table">
+        <thead class="thead-dark">
+        <tr >
+          <th *ngFor="let head of thead"> {{ head }} </th>
+        </tr>
+        </thead>
+
+        <tr *ngFor="let request of requests">
+          <td>
+            <a href="/find/{{ request.id }}"> {{ request.id }} </a>
+          </td>
+          <td>
+            {{ request.requested_by }}
+          </td>
+          <td>
+            {{ request.a_group }}
+          </td>
+          <td>
+            {{ request.phone }}
+          </td>
+          <td>
+            {{ request.site }}
+          </td>
+          <td>
+            {{ request.request_day }}
+          </td>
+          <td>
+            {{ request.title }}
+          </td>
+          <td>
+            {{ request.description }}
+          </td>
+          <td>
+            {{ request.status }}
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+</div>

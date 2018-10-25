@@ -1,4 +1,4 @@
-<p>
+<!--<p>
   user works!
 </p>
 
@@ -8,4 +8,42 @@
   <li *ngFor="let user of users">
     {{ user.name }} {{ user.username }} {{ user.role }} {{ user.password }}
   </li>
-</ul>
+</ul>-->
+
+<div class="container">
+    <div class="row">
+      <div class="col-xl-12 offset-xl-12">
+              <div class="card hovercard">
+                  <div class="cardheader">
+                  </div>
+                  <div class="avatar">
+                      <img alt="" src="https://apo-eislingen.de/wordpress/wp-content/uploads/2016/10/Unknown-Placeholder-Portrait-20150724A.jpg">
+                  </div>
+                  <div class="info">
+                      <div class="title">
+                          <a target="_blank" href="https://scripteden.com/">{{name}}</a>
+                      </div>
+                      <div class="desc">{{username}}</div>
+                      <div class="desc">{{email}}</div>
+                      <div class="desc">Developer</div>
+                  </div>
+                  <div class="bottom">
+                      <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/">
+                          <i class="fa fa-twitter"></i>
+                      </a>
+                      <a class="btn btn-danger btn-sm" rel="publisher"
+                         href="https://plus.google.com/">
+                          <i class="fa fa-google-plus"></i>
+                      </a>
+                      <a class="btn btn-primary btn-sm" rel="publisher"
+                         href="https://plus.google.com/">
+                          <i class="fa fa-facebook"></i>
+                      </a>
+                      <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/">
+                          <i class="fa fa-behance"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>

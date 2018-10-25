@@ -1,0 +1,190 @@
+<!--<div id="page-content-wrapper"  id="mainContent" class="col-lg-9">
+
+    <div class="container-fluid">
+        <form>
+            <input type="text" [(ngModel)]="username" name="username" #ctrl="ngModel">
+            <button type="submit" (click)="findRequest()">Find Request</button>
+        </form> 
+    </div>
+
+    <div *ngIf="requests.length > 0">
+
+      <table class="table">
+        <thead class="thead-dark">
+        <tr >
+          <th *ngFor="let head of thead"> {{ head }} </th>
+        </tr>
+        </thead>
+
+        <tr *ngFor="let request of requests">
+          <td>
+            <a href="/find/{{ request.id }}"> {{ request.id }} </a>
+          </td>
+          <td>
+            {{ request.requested_by }}
+          </td>
+          <td>
+            {{ request.a_group }}
+          </td>
+          <td>
+            {{ request.phone }}
+          </td>
+          <td>
+            {{ request.site }}
+          </td>
+          <td>
+            {{ request.request_day }}
+          </td>
+          <td>
+            {{ request.title }}
+          </td>
+          <td>
+            {{ request.description }}
+          </td>
+          <td>
+            {{ request.status }}
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+</div>
+-->
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xl-8 offset-xl-2">
+
+            <h1>
+                Search Request
+            </h1>
+
+            <p class="lead"></p>
+            <form id="contact-form" method="post" action="" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_name">Requestor</label>
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Requestor Username" required="required"
+                                    data-error="Firstname is required." />
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Site</label>
+                                <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                    data-error="Lastname is required.">
+                                    <option>Monterrey</option>
+                                    <option>Aguascalientes</option>
+                                    <option>Guadalajara</option>
+                                    <option>Mérida</option>  
+                                    <option>Ensenada</option>  
+                                    <option>Corporativo</option>  
+                                    <option>Ciudad de México</option>  
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_email">Group</label>
+                                <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                    data-error="Lastname is required.">
+                                    <option>Development</option>
+                                    <option>QA</option>
+                                    <option>ARH</option>
+                                    <option>Support</option>  
+                                    <option>Maintenance</option>  
+                                    <option>Staff</option>  
+                                    <option>Third Party Services</option>  
+                                    <option>Networking</option>  
+                                    <option>IT</option>  
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_phone">Phone Ext.</label>
+                                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_email">IS</label>
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="* IS" required="required"
+                                    data-error="Valid email is required." >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <input type="submit" class="btn btn-success btn-send" (click)="findRequest()" value="Search">
+
+                </div>
+            </form>
+          </div>
+
+          
+          <div class="row">
+
+             
+          <div *ngIf="requests.length > 0" class="col-xl-8 offset-xl-2">
+
+              <br/><br/>
+              <table class="table">
+                <thead class="thead-dark">
+                <tr >
+                  <th *ngFor="let head of thead"> {{ head }} </th>
+                </tr>
+                </thead>
+                <tr *ngFor="let request of requests">
+                  <td>
+                    <a href="/find/{{ request.id }}"> {{ request.id }} </a>
+                  </td>
+                  <td>
+                    {{ request.requested_by }}
+                  </td>
+                  <td>
+                    {{ request.a_group }}
+                  </td>
+                  <td>
+                    {{ request.phone }}
+                  </td>
+                  <td>
+                    {{ request.site }}
+                  </td>
+                  <td>
+                    {{ request.request_day }}
+                  </td>
+                  <td>
+                    {{ request.title }}
+                  </td>
+                  <td>
+                    {{ request.description }}
+                  </td>
+                  <td>
+                    {{ request.status }}
+                  </td>
+                </tr>
+              </table>
+              </div>
+            </div>
+
+    </div>
+</div>

@@ -1,73 +1,117 @@
-<div id="page-content-wrapper"  id="mainContent" class="col-lg-9">
-  <h1>Create Request</h1>
+<div class="container">
+    <div class="row">
 
-  <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect2">Example multiple select</label>
-      <select multiple class="form-control" id="exampleSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleTextarea">Example textarea</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-      <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-    </div>
-    <fieldset class="form-group"> 
-      <legend>Radio buttons</legend> 
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          Option one is this and that&mdash;be sure to include why it's great
-        </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
-        </label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-          Option three is disabled
-        </label>
-      </div>
-    </fieldset>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input">
-        Check me out
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+        <div class="col-xl-8 offset-xl-2">
 
+            <h1>
+                Create Requests
+            </h1>
+
+            <p class="lead"></p>
+            <form id="contact-form" method="post" action="" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_name">Requestor</label>
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required"
+                                    data-error="Firstname is required." value="{{username}}" disabled>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Site</label>
+                                <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                    data-error="Lastname is required.">
+                                    <option>Monterrey</option>
+                                    <option>Aguascalientes</option>
+                                    <option>Guadalajara</option>
+                                    <option>Mérida</option>  
+                                    <option>Ensenada</option>  
+                                    <option>Corporativo</option>  
+                                    <option>Ciudad de México</option>  
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_email">Group</label>
+                                <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                    data-error="Lastname is required.">
+                                    <option>Development</option>
+                                    <option>QA</option>
+                                    <option>ARH</option>
+                                    <option>Support</option>  
+                                    <option>Maintenance</option>  
+                                    <option>Staff</option>  
+                                    <option>Third Party Services</option>  
+                                    <option>Networking</option>  
+                                    <option>IT</option>  
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_phone">Phone Ext.</label>
+                                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_email">Date</label>
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="* IS" required="required"
+                                    data-error="Valid email is required." value="{{dat | date: 'dd/MM/yyyy'}}" disabled>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="form_phone">Priority</label>
+                                <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                    data-error="Lastname is required.">
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="form_email">Title</label>
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="* Description title" required="required"
+                                    data-error="Valid email is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form_message">Description</label>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="* Description of the issue." rows="4" required="required"
+                            data-error="Please, leave us a message."></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <input type="submit" class="btn btn-success btn-send" value="Create Request">
+
+                </div>
+            </form>
+          </div>
+    </div>
 </div>

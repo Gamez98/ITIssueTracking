@@ -1,10 +1,11 @@
+
 <div class="container">
   <div class="card card-container">
-    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <img id="profile-img" class="profile-img-card" src="https://pbs.twimg.com/profile_images/1049781495420805121/cfvZid92_400x400.jpg" />
     <p id="profile-name" class="profile-name-card"></p>
     <form class="form-signin" [formGroup]="control" (ngSubmit)="login()">
       <span id="reauth-email" class="reauth-email"></span>
-      <input type="email" name="username" id="username" [formControl]="username" class="form-control" placeholder="Email address" required autofocus>
+      <input type="email" name="username" id="username" [formControl]="username" class="form-control" placeholder="Username" required autofocus>
       <input type="password" name="password" id="password" [formControl]="password" class="form-control" placeholder="Password" required>
       <div id="remember" class="checkbox">
         <label>

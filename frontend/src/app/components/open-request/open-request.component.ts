@@ -12,10 +12,10 @@ import {RequestService} from '../../services/request/request.service';
 export class OpenRequestComponent implements OnInit {
 
   username: any;
-  private userData: any;
-  private requestData: any;
-  private requests: Requests[] = [];
-  private thead: any = this.req.req_head;
+  userData: any;
+  requestData: any;
+  requests: any;
+  thead: any = this.req.req_head;
 
   constructor(
     public nav: NavbarService,

@@ -19,6 +19,8 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { RequestComponent } from './components/request/request.component';
 
 import { MaterialModule } from './UILib/material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { LogoutComponent } from './components/logout/logout.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -57,6 +59,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
     ReactiveFormsModule,

@@ -1,0 +1,170 @@
+
+<!--
+<div *ngIf="requests.length > 0" id="mainContent" class="col-lg-9">
+  <table class="table">
+    <thead class="thead-dark">
+    <tr >
+      <th *ngFor="let head of thead"> {{ head }} </th>
+    </tr>
+    </thead>
+
+    <tr *ngFor="let request of requests">
+      <td>
+        <a href="/find/{{ request.id }}"> {{ request.id }} </a>
+      </td>
+      <td>
+        {{ request.requested_by }}
+      </td>
+      <td>
+        {{ request.a_group }}
+      </td>
+      <td>
+        {{ request.phone }}
+      </td>
+      <td>
+        {{ request.site }}
+      </td>
+      <td>
+        {{ request.request_day }}
+      </td>
+      <td>
+        {{ request.title }}
+      </td>
+      <td>
+        {{ request.description }}
+      </td>
+      <td>
+        {{ request.status }}
+      </td>
+    </tr>
+  </table>
+</div>
+-->
+
+<div class="container">
+  <div class="row">
+
+      <div *ngIf="requests.length > 0" class="col-xl-8 offset-xl-2">
+          <ng-container *ngFor="let request of requests">
+
+          <h1>
+              View Request
+          </h1>
+
+          <p class="lead"></p>
+
+          <form id="contact-form" role="form">
+
+              <div class="messages"></div>
+            
+              <div class="controls">
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <div class="form-group">
+                              <label for="form_name">Requestor</label>
+                              <input id="form_name" type="text" name="name" class="form-control" 
+                                  data-error="Firstname is required." value="{{ request.requested_by }}" disabled>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="form-group">
+                              <label for="form_lastname">Site</label>
+                              <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                  data-error="Lastname is required." value="{{request.site}}" disabled>
+                                  <option>Monterrey</option>
+                                  <option>Aguascalientes</option>
+                                  <option>Guadalajara</option>
+                                  <option>Mérida</option>  
+                                  <option>Ensenada</option>  
+                                  <option>Corporativo</option>  
+                                  <option>Ciudad de México</option>  
+                              </select>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <div class="form-group">
+                              <label for="form_email">Group</label>
+                              <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                  data-error="Lastname is required." value="request.a_group" disabled>
+                                  <option>Development</option>
+                                  <option>QA</option>
+                                  <option>ARH</option>
+                                  <option>Support</option>  
+                                  <option>Maintenance</option>  
+                                  <option>Staff</option>  
+                                  <option>Third Party Services</option>  
+                                  <option>Networking</option>  
+                                  <option>IT</option>  
+                              </select>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="form-group">
+                              <label for="form_phone">Phone Ext.</label>
+                              <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone" value="{{request.phone}}" disabled>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <div class="form-group">
+                              <label for="form_email">Date</label>
+                              <input id="form_email" type="email" name="email" class="form-control" placeholder="* IS" required="required"
+                                  data-error="Valid email is required." value="{{request.request_day}}" disabled>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="form-group">
+                              <label for="form_phone">Status</label>
+                              <select id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                  data-error="Lastname is required." value="{{ request.status }}" disabled>
+                                  <option>Open</option>
+                                  <option>Closed</option>
+                                  <option>High</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="form-group">
+                              <label for="form_email">Title</label>
+                              <input id="form_email" type="email" name="email" class="form-control" placeholder="* Description title" required="required"
+                                  data-error="Valid email is required." value="{{request.title}}" disabled>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="form_message">Description</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="* Description of the issue." rows="4" required="required"
+                          data-error="Please, leave us a message." value="{{request.description}}" disabled></textarea>
+                      <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="form_message">Commentary</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="* Description of the issue." rows="4" required="required"
+                          data-error="Please, leave us a message." ></textarea>
+                      <div class="help-block with-errors"></div>   
+                  </div>
+
+                  <input type="submit" class="btn btn-success btn-send" value="Add Comment">
+
+              </div>
+          </form>
+          </ng-container>
+        </div>
+  </div>
+</div>

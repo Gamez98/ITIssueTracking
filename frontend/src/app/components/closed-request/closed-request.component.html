@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+
+        <h1>
+            Your Closed Requests
+        </h1>
+
+        <div *ngIf="requests.length > 0" class="col-xl-12 offset-xl-12">
+  
+          <table class="table">
+            <thead class="thead-dark">
+            <tr >
+              <th *ngFor="let head of thead"> {{ head }} </th>
+            </tr>
+            </thead>
+            <tr *ngFor="let request of requests">
+              <ng-container *ngIf="username == request.requested_by && request.status == 'closed'">
+              <td>
+                <a href="/find/{{ request.id }}"> {{ request.id }} </a>
+              </td>
+              <td>
+                {{ request.requested_by }}
+              </td>
+              <td>
+                {{ request.a_group }}
+              </td>
+              <td>
+                {{ request.phone }}
+              </td>
+              <td>
+                {{ request.site }}
+              </td>
+              <td>
+                {{ request.request_day }}
+              </td>
+              <td>
+                {{ request.title }}
+              </td>
+              <td>
+                {{ request.description }}
+              </td>
+              <td>
+                {{ request.status }}
+              </td>
+              </ng-container>
+            </tr>
+          </table>
+          </div>
+    </div>
+  </div>
+  

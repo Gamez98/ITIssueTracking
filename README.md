@@ -1,5 +1,9 @@
 # ITIssueTracking
 
+## Documentation
+
+* [Complete documentation](https://docs.google.com/document/d/1a8YckwJz4uW82I_vOpyvo_oHmVCmBZLJB3wZZeo7hT8/edit?usp=sharing)
+
 ## Description
 
 WebApp that serve as HelpDesk for the tracking of issues / tickets related to IT.
@@ -27,7 +31,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+For the versions available, see the [tags on this repository](https://github.com/Gamez98/ITIssueTracking/issues). 
 
 ## Authors
 

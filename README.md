@@ -24,6 +24,7 @@ We decided to create a web application that allows employees to create requests 
 * [Set Up](https://github.com/Gamez98/ITIssueTracking/wiki/Set-Up) - Set up local environment
 * [Configuration](https://github.com/Gamez98/ITIssueTracking/wiki/Configuration) - Configure and generate build 
 * [Contribution](https://github.com/Gamez98/ITIssueTracking/wiki/Contribution) - Contribution
+* [Roadmap](https://github.com/Gamez98/ITIssueTracking/wiki/Roadmap) - Contribution
 
 ## Contributing
 
